@@ -8,7 +8,7 @@ job.py command.sh 3
 If you specify a number after the command, that is how many retries will be attempted if the result code is greater than 0.
 
 ## GOAL
-Simplify the execution process of scheduled jobs that sometimes fail for reasons that can be resolved by simply resubmitting the job.
+Simplify the execution process of scheduled jobs that sometimes fail for reasons that can be resolved by simply resubmitting the job. Generally, this is used to submit SAS jobs that sometimes fail due to API call failures that are resolved by a second attempt.
 
 ## LICENSE
 Copyright (c) 2020 Haynie IPHC, LLC\
