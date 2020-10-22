@@ -62,6 +62,8 @@ if len(sys.argv) > 2:
 else:
     attempts = 0
 
+print("Job: " + arg1)
+
 while (counter <= attempts):
     result, output, error = submit(arg1)
     counter += 1
