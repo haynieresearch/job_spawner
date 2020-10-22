@@ -62,7 +62,7 @@ if len(sys.argv) > 2:
 else:
     attempts = 0
 
-print("Job: " + arg1)
+print("Job: " + arg1 + "\n")
 
 while (counter <= attempts):
     result, output, error = submit(arg1)
@@ -72,6 +72,9 @@ while (counter <= attempts):
         print("Output: " + output)
         exit(result)
     elif ((result > 0) and (counter <= attempts)):
+        print("Return code: {}".format(result));
+        print("Output: " + output)
+        print("Error: " + error)
         print("Retrying job, attempt: " + str(counter))
     else:
         print("Return code: {}".format(result));
