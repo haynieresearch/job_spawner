@@ -70,7 +70,7 @@ while (counter <= attempts):
     if result == 0:
         print("Return code: {}".format(result));
         print("Output: " + output)
-        Print("Success, job completed without error.\n")
+        print("Success, job completed without error.\n")
         exit(0)
     elif ((result == 1) or (result == 2)):
         print("Return code: {}".format(result));
