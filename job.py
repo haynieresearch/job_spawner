@@ -67,9 +67,15 @@ print("Job: " + arg1 + "\n")
 while (counter <= attempts):
     result, output, error = submit(arg1)
     counter += 1
-    if result == 0:
+    if ((result == 0) or (result == 2)):
         print("Return code: {}".format(result));
         print("Output: " + output)
+        exit(0)
+    if ((result == 126) or (result == 127)):
+        print("Return code: {}".format(result));
+        print("Output: " + output)
+        print("Error: " + error)
+        print("Aborting due to command not found or unable to execute.")
         exit(result)
     elif ((result > 0) and (counter <= attempts)):
         print("Return code: {}".format(result));
