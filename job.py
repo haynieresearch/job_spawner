@@ -70,18 +70,18 @@ while (counter <= attempts):
     if result == 0:
         print("Return code: {}".format(result));
         print("Output: " + output)
-        Print("Success, job completed without error.")
+        Print("Success, job completed without error.\n")
         exit(0)
     elif ((result == 1) or (result == 2)):
         print("Return code: {}".format(result));
         print("Output: " + output)
-        print("Warning, job completed but finished with non fatal errors. Error:" + error)
+        print("Warning, job completed but finished with non fatal errors.\n")
         exit(0)
     elif ((result == 126) or (result == 127)):
         print("Return code: {}".format(result));
         print("Output: " + output)
         print("Error: " + error)
-        print("Aborting due to command not found or unable to execute.")
+        print("Aborting due to command not found or unable to execute.\n")
         exit(result)
     elif ((result > 2) and (counter <= attempts)):
         print("Return code: {}".format(result));
