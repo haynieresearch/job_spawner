@@ -72,7 +72,7 @@ while (counter <= attempts):
         print("Output: " + output)
         exit(result)
     elif ((result > 0) and (counter <= attempts)):
-        print("Retrying command...")
+        print("Retrying job, attempt: " + str(counter))
     else:
         print("Return code: {}".format(result));
         print("Output: " + output)
